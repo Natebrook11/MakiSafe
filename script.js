@@ -8,13 +8,13 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function(){
-        if ($(this).scrollTop() > 100 + 'dvh') {
+        if ($(this).scrollTop() > 100) {
            // Remove 'active' class from all list items
                     $('nav ul li').removeClass('active');
 
                     // Add 'active' class to the clicked list item
                     $('#menuinfo').addClass('active');
-        } else if ($(this).scrollTop() > 200 + 'dvh') {
+        } else if ($(this).scrollTop() > 200) {
            // Remove 'active' class from all list items
                     $('nav ul li').removeClass('active');
 
