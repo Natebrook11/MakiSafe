@@ -8,7 +8,7 @@ $(document).ready(function () {
     });
 
     const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll("nav ul li a");
+const navLi = document.querySelectorAll("nav ul li");
 window.onscroll = () => {
   var current = "";
 
