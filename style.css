@@ -56,11 +56,17 @@
 
   /* Css reset end */
 
+
   html {
     background-color: var(--primary);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='399' viewBox='0 0 100 199'%3E%3Cg fill='%23003049' fill-opacity='.1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     scroll-behavior: smooth;
+  }
+
+  ::selection{
+    background-color: var(--secondary);
+    color: var(--primary);
   }
 
   hr {
@@ -208,11 +214,40 @@
     top: 0;
   }
 
+
+  .logo{
+    float: left;
+    margin-top: 2em;
+    margin-left: 2em;
+  }
+
+  .logo .main{
+    display: block;
+  }
+
+  .logo .submain{
+    display: none;
+  }
+
+  .logo:hover{
+    cursor: pointer;
+    
+  }
+
+  .logo:hover .main{
+    display: none;
+  }
+
+  .logo:hover .submain{
+    display: block;
+  }
+
   nav {
     max-width: 600px;
     width: 100%;
     margin: auto;
     z-index:9999;
+    margin-top: 2em;
   }
 
   nav ul {
@@ -367,4 +402,81 @@
     width: 100%;
     text-align: center;
     
+  }
+
+
+  .loader {
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    border-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    width: 36px;
+    height: 36px;
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    width: 36px;
+    height: 36px;
+    -webkit-animation: spin89345 1s linear infinite;
+            animation: spin89345 1s linear infinite;
+  }
+
+  
+  @-webkit-keyframes spin89345 {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin89345 {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c0a0b;
+    overflow: hidden;
+    z-index: 100;
+  }
+  .preloader .text-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    overflow: hidden;
+    color: white;
+    opacity: 0;
+    
+  
+  }
+
+
+  .preloader .text-container h5{
+    font-size: clamp(26px, 17.5vw, 36px) !important;
+  }
+
+  h5{
+    margin: 0;
+    padding: 0;
   }

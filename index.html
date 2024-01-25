@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <!DOCTYPE html>
-<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MakiSafe</title>
+  <link rel="stylesheet" href="/style.css">
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
 
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="text-container">
+      <h5>The</h5>
+      <h5>New</h5>
+      <h5>Security</h5>
+      <h5>Revolution!</h5>
+    </div>
+  </div>
   <header>
+    <div class="logo">
+      <h3 class="main">🔐</h3>
+      <h3 class="submain">🔓</h3>
+    </div>
     <nav>
       <ul>
         <li class="home active"><a href="#home">H🏠me</a></li>
@@ -32,7 +40,7 @@
       <h3>The new Security revolution!</h3>
       <button class="learn-more">
         <span class="circle" aria-hidden="true">
-        <span class="icon arrow"></span>
+          <span class="icon arrow"></span>
         </span>
         <span class="button-text">Learn More</span>
       </button>
@@ -44,7 +52,9 @@
         veniam beatae aspernatur aliquid iusto voluptatum similique ea in ut suscipit deleniti? Tenetur voluptatibus in
         eum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet aliquam ut labore impedit dolore
         iusto ipsa, reiciendis numquam eius ratione temporibus ducimus eligendi architecto possimus aperiam tempora nisi
-        ullam? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsa quis ab eos laborum fugiat ipsum illo minima labore atque, magni, sit architecto dignissimos maxime odio soluta sunt aliquid nostrum!
+        ullam? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsa quis ab eos laborum
+        fugiat ipsum illo minima labore atque, magni, sit architecto dignissimos maxime odio soluta sunt aliquid
+        nostrum!
         <br>
       </p>
       <h4>
@@ -53,6 +63,7 @@
     </section>
     <hr>
     <section class="contact" id="contactus">
+      <h3>Contact</h3>
       <form action="">
         <div class="input-container">
           <input type="text" id="input" required="">
@@ -70,11 +81,11 @@
           <div class="underline"></div>
         </div>
         <button type="submit" class="learn-more">
-        <span class="circle" aria-hidden="true">
-        <span class="icon arrow"></span>
-        </span>
-        <span class="button-text">Submit It!</span>
-      </button>
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Submit It!</span>
+        </button>
 
       </form>
     </section>
@@ -83,8 +94,7 @@
       <h5>Code By NateBrook junior software engineer</h5>
     </footer>
 </body>
+<script type="module" src="/script.js"></script>
 
-</html>
-    <script type="module" src="script.js"></script>
-  </body>
+
 </html>
