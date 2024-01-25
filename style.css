@@ -212,6 +212,7 @@
     max-width: 600px;
     width: 100%;
     margin: auto;
+    z-index:9999;
   }
 
   nav ul {
@@ -277,7 +278,6 @@
 
   .hero {
     padding-top: 20dvh;
-    position:relative;
 
     text-align: center;
     width: 100%;
