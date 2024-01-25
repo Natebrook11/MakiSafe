@@ -7,19 +7,22 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 100) {
-           // Remove 'active' class from all list items
-                    $('nav ul li').removeClass('active');
+    const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("nav ul li a");
+window.onscroll = () => {
+  var current = "";
 
-                    // Add 'active' class to the clicked list item
-                    $('#menuinfo').addClass('active');
-        } else if ($(this).scrollTop() > 200) {
-           // Remove 'active' class from all list items
-                    $('nav ul li').removeClass('active');
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 60) {
+      current = section.getAttribute("id"); }
+  });
 
-                    // Add 'active' class to the clicked list item
-                    $('#menucontact').addClass('active');
-        }
-    });
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+};
 });
