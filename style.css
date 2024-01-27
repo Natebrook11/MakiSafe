@@ -223,10 +223,12 @@
 
   .logo .main{
     display: block;
+    transition: all ease 1s;
   }
 
   .logo .submain{
     display: none;
+    transition: all ease 1s;
   }
 
   .logo:hover{
@@ -456,7 +458,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0c0a0b;
+    background-color: var(--primary);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='399' viewBox='0 0 100 199'%3E%3Cg fill='%23003049' fill-opacity='.1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
     overflow: hidden;
     z-index: 100;
   }
@@ -465,7 +469,7 @@
     flex-direction: row;
     gap: 1em;
     overflow: hidden;
-    color: white;
+    color: var(--secondary);
     opacity: 0;
     
   
@@ -473,7 +477,7 @@
 
 
   .preloader .text-container h5{
-    font-size: clamp(26px, 17.5vw, 36px) !important;
+    font-size: clamp(26px, 17.5vw, 46px) !important;
   }
 
   h5{
