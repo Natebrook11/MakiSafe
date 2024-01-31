@@ -213,6 +213,7 @@
     text-align: center;
     position: fixed;
     top: 0;
+    z-index: 9999;
   }
 
 
@@ -424,6 +425,24 @@
     animation: spin89345 1s linear infinite;
   }
 
+  @keyframes fadeIn{
+    0%{
+      transform: translateY(-1000px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn{
+    0%{
+      transform: translateX(-1000px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+
 
   @-webkit-keyframes spin89345 {
     0% {
@@ -464,6 +483,7 @@
     background-attachment: fixed;
     overflow: hidden;
     z-index: 100;
+    z-index: 9999 !important;
   }
 
   .preloader .text-container {
@@ -501,6 +521,7 @@
     position: fixed;
     bottom: 16px;
     right: 16px;
+    z-index: 9999;
   }
 
   .cookies h4{margin: 0px;
@@ -786,3 +807,82 @@
       transform: translateX(1000px);
     }
   }
+
+
+  .row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    gap: 24px;
+  }
+  
+  .bentoflex{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 220px;
+    gap: 12px;
+  }
+  
+  .box{
+    background: #00000020;
+    backdrop-filter: blur(5px);
+    color: var(--secondary);
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+  }
+  
+  .wide{
+    width: 66% !important;
+  }
+  
+  .small{
+    width: 33% !important;
+  }
+  
+  .wide{
+    padding: 24px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+  }
+  
+  .box h5{
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+  
+  .box h4{
+    position: relative;
+    line-height: .8;
+    margin-top: 60px;
+  }
+  
+  .box p {
+    font-size:10px ;
+    margin-top: -30px;
+    max-width: 80%;
+    color: #7d7d7d;
+  }
+  .box img{
+    width: 50vh;
+
+  }
+  
+  .small{
+    padding: 24px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: block;
+    position: relative;
+  }
+  
+  
+  
+  
+  
