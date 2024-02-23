@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MakiSafe</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>MakiSafe - The new security revolution 🔐</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/img/lock.svg" type="image/x-icon">
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -17,15 +18,15 @@
   <div class="cookies">
     <h4>Cookies 🍪</h4>
     <br>
-    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, facilis est ab deserunt placeat molestias
-      corrupti excepturi quos consequuntur atque at. Officiis molestiae consequatur itaque atque distinctio
-      exercitationem odio ullam!</h5>
+    <h5>We use cookies to improve the user experience in our website. You can check all the datta that we compile and
+      use in the licence file. You might accept the cookies to be able to use the page due to the services provided.
+    </h5>
     <br>
 
     <div class="flex">
       <a href="#" onclick="alert('You might accept the cookies to be able to navigate the page 🍪!')">Decline</a>
 
-      <button class="accept">
+      <button onclick="localStorage.setItem('cookieConsent', 'yes');" class="accept">
         Accept
         <div class="icon-1">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.3 65.33"
@@ -73,18 +74,57 @@
   </div>
   <header>
     <div class="logo">
-      <h3 class="main">🔐</h3>
-      <h3 class="submain">🔓</h3>
+      <h3 class="main"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" style="fill: var(--secondary);transform: ;msFilter:;"><path d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7zm4 10.723V20h-2v-2.277a1.993 1.993 0 0 1 .567-3.677A2.001 2.001 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723z"></path></svg></h3>
+      <h3 class="submain"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" style="fill: var(--secondary);transform: ;msFilter:;"><path d="M18 10H9V7c0-1.654 1.346-3 3-3s3 1.346 3 3h2c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-7.939 5.499A2.002 2.002 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723V20h-2v-2.277a1.992 1.992 0 0 1-.939-2.224z"></path></svg></h3>
+      <div class="rigth-click">
+        <ul>
+          <li><a href="/assets/img/lock.svg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path
+                d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7zm4 10.723V20h-2v-2.277a1.993 1.993 0 0 1 .567-3.677A2.001 2.001 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723z">
+              </path>
+            </svg> Copy logo as svg</a></li>
+          <li><a href="/assets/readme.md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path
+                d="M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2zm7 2h8v2h-8V7zm0 4h8v2h-8v-2zm0 4h8v2h-8v-2zM6 7h2v2H6V7zm0 4h2v2H6v-2zm0 4h2v2H6v-2z">
+              </path>
+            </svg>Readme.md</a></li>
+          <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path
+                d="M18 15c-.183 0-.358.022-.532.054L8.946 6.532C8.978 6.359 9 6.182 9 6c0-1.654-1.346-3-3-3S3 4.346 3 6c0 1.302.839 2.401 2 2.815v6.369A2.997 2.997 0 0 0 3 18c0 1.654 1.346 3 3 3a2.993 2.993 0 0 0 2.815-2h6.369a2.994 2.994 0 0 0 2.815 2c1.654 0 3-1.346 3-3S19.654 15 18 15zm-11 .184V8.816c.329-.118.629-.291.894-.508l7.799 7.799a2.961 2.961 0 0 0-.508.894h-6.37A2.99 2.99 0 0 0 7 15.184zM6 5a1.001 1.001 0 1 1-1 1c0-.551.448-1 1-1zm0 14a1.001 1.001 0 0 1 0-2 1.001 1.001 0 0 1 0 2zm12 0a1.001 1.001 0 0 1 0-2 1.001 1.001 0 0 1 0 2z">
+              </path>
+            </svg>Brand guide lines</a> </li>
+          <li><a href="https://nbrook.netlify.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path
+                d="M15.165 15.582c4.587-4.073 8.141-9.424 6.057-11.771-.661-.744-1.584-1.089-2.575-.983-.832.091-1.687.502-2.549 1.192a8.922 8.922 0 0 0-8.712.282 8.917 8.917 0 0 0-4.109 5.515 8.892 8.892 0 0 0 .306 5.325c-1.065 1.203-2.054 3.677-.823 5.063.517.581 1.257.841 2.147.841 2.707 0 6.808-2.399 10.258-5.464zm3.699-10.767c.358-.034.632.064.861.323.231.261.169.946-.252 1.929a9.059 9.059 0 0 0-1.617-1.853c.431-.262.776-.373 1.008-.399zM4.633 17.118a8.979 8.979 0 0 0 1.568 1.737c-1.025.303-1.714.283-1.945.021-.217-.243.002-1.069.377-1.758zm16.31-5.869c-1.215 1.797-2.906 3.671-4.778 5.333-1.934 1.719-4.066 3.208-6.05 4.202a9.082 9.082 0 0 0 1.874.212 8.986 8.986 0 0 0 4.616-1.282 8.915 8.915 0 0 0 4.338-8.465z">
+              </path>
+            </svg>Nate's portfolio</a></li>
+          <li class="hr">
+            <hr>
+          </li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+              <path
+                d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z">
+              </path>
+            </svg> Page code</li>
+        </ul>
+      </div>
     </div>
     <nav>
       <ul>
+        <span class="nav-slider"></span>
         <li class="home active"><a href="#home">H🏠me</a></li>
         <li class="info"><a href="#info">Info</a></li>
         <li class="contactus"><a href="#contactus">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <div class="preloader">
+  <!-- <div class="preloader">
     <div class="text-container">
       <h5>The</h5>
       <h5>New</h5>
@@ -92,11 +132,79 @@
       <h5>Revolution!</h5>
       <h5>🔐</h5>
     </div>
+  </div> -->
+  <div class="audio">
+    <audio id="myAudio"
+      src="https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3"></audio>
+    <button onclick="pepe()" class="audio-btn">
+      <div class="audio-btn-icon"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"
+          style="fill: var(--primary);transform: ;msFilter:;">
+          <circle cx="12.01" cy="12" r="2"></circle>
+          <path d="M11.01 22h2l.5-7h-3l.5 7z"></path>
+          <path d="M12 2a10 10 0 0 0-2.45 19.68l-.15-2.12a8 8 0 1 1 5.21 0l-.15 2.12A10 10 0 0 0 12 2z"></path>
+          <path
+            d="M15.32 9.61a3.44 3.44 0 0 1 .37.68 3.83 3.83 0 0 1 .23.75 3.57 3.57 0 0 1 .09.8 3.66 3.66 0 0 1-.09.81 3.83 3.83 0 0 1-.23.75 3.44 3.44 0 0 1-.37.68 4.7 4.7 0 0 1-.35.43l-.19 2.62a5.33 5.33 0 0 0 .58-.31A5.86 5.86 0 0 0 17 15.2a5.57 5.57 0 0 0 .55-1 5.89 5.89 0 0 0 .35-1.13 6.06 6.06 0 0 0 .1-1.23 6.22 6.22 0 0 0-.13-1.21A6.09 6.09 0 0 0 17 8.49a6.29 6.29 0 0 0-.73-.89 5.67 5.67 0 0 0-.89-.73 6.3 6.3 0 0 0-1-.56A6.17 6.17 0 0 0 13.21 6a6.11 6.11 0 0 0-2.41 0 5.51 5.51 0 0 0-1.13.36 5.57 5.57 0 0 0-1 .55 5.67 5.67 0 0 0-.89.73 6.29 6.29 0 0 0-.78.85 6.09 6.09 0 0 0-.9 2.14 6.21 6.21 0 0 0-.1 1.21 6.06 6.06 0 0 0 .12 1.21 5.89 5.89 0 0 0 .35 1.13 5.57 5.57 0 0 0 .55 1 6.24 6.24 0 0 0 1.62 1.62 5.33 5.33 0 0 0 .58.31L9 14.51a4.7 4.7 0 0 1-.35-.43 3.44 3.44 0 0 1-.37-.68 3.83 3.83 0 0 1-.23-.75 3.65 3.65 0 0 1-.05-.81 3.56 3.56 0 0 1 .08-.8 3.83 3.83 0 0 1 .23-.75 3.44 3.44 0 0 1 .37-.68 4 4 0 0 1 .5-.61 3.87 3.87 0 0 1 .59-.48 3.44 3.44 0 0 1 .68-.37 3.86 3.86 0 0 1 .75-.24 4.36 4.36 0 0 1 1.61 0 3.86 3.86 0 0 1 .75.24 3.58 3.58 0 0 1 1.27.85 3.49 3.49 0 0 1 .49.61z">
+          </path>
+        </svg></div>
+      <div class="audio-btn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"
+          style="fill: var(--primary);transform: ;msFilter:;">
+          <path
+            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z">
+          </path>
+          <path d="m9 17 8-5-8-5z"></path>
+        </svg>
+      </div>
+    </button>
+
+    <script>
+      var myAudio = document.getElementById("myAudio");
+      var isPlaying = false;
+
+      function pepe() {
+        if (isPlaying) {
+          myAudio.pause()
+          console.log('no playing')
+        } else {
+          myAudio.play();
+          console.log('playing')
+        }
+      };
+      myAudio.onplaying = function () {
+        isPlaying = true;
+      };
+      myAudio.onpause = function () {
+        isPlaying = false;
+      };
+    </script>
   </div>
+
   <main>
+
     <section class="hero" id="home">
       <h1>MakiSafe</h1>
-      <h3>The new Security revolution!</h3>
+      <div class="text-animation-render">
+        <div>
+          <span>The</span>
+          <span>The</span>
+        </div>
+        <div>
+          <span>new</span>
+          <span>new</span>
+        </div>
+        <div>
+          <span>security</span>
+          <span>security</span>
+        </div>
+        <div>
+          <span>revolution</span>
+          <span>revolution</span>
+        </div>
+        <div>
+          <span>!</span>
+          <span>!</span>
+        </div>
+      </div>
       <button class="learn-more">
         <span class="circle" aria-hidden="true">
           <span class="icon arrow"></span>
@@ -119,8 +227,7 @@
       <h4>
         Nate brook
       </h4>
-    </section>
-    <section>
+
       <div class="row">
         <div class="bentoflex">
           <div class="box wide">
@@ -161,28 +268,9 @@
             <img src="https://symbl-world.akamaized.net/i/webp/73/075e3a0a0dcfacae33ab2e87e985fa.webp" alt="">
 
           </div>
-          
+
         </div>
-        <div class="bentoflex">
-          <div class="box wide">
-            <div class="text">
-              <h5>Aboout us</h5>
 
-              <h4>Hey there this is a box and this is the title</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, nihil reiciendis</p>
-
-
-            </div>
-            <img src="https://symbl-world.akamaized.net/i/webp/73/075e3a0a0dcfacae33ab2e87e985fa.webp" alt="">
-
-          </div>
-          <div class="box small">
-            <h5>Loggin in</h5>
-
-            <h4>Title title tie title tile tiel</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-          </div>
-        </div>
       </div>
     </section>
     <hr>
@@ -218,13 +306,30 @@
       <h5>Code By NateBrook junior software engineer</h5>
     </footer>
 </body>
-<script type="module" src="/script.js"></script>
+<script type="module" src="/assets/js/script.js"></script>
+
+<script type="module" src="/assets/js/rigthclick.js"></script>
 <script>$(".accept").click(function () {
     $(".cookies").toggleClass("hide");
     setTimeout(
       function () {
         $(".cookies").toggleClass("hidden");
       }, 1600);
-  });</script>
+  });
+
+
+  function cookieConsent() {
+    if (localStorage.getItem('cookieConsent') == 'yes') {
+
+      $('.cookies').addClass('hidden');
+    } else {
+      return
+    }
+  }
+
+
+  window.onpaint = cookieConsent();
+
+</script>
 
 </html>
