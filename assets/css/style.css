@@ -259,7 +259,7 @@
     text-align: center;
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 7777;
   }
 
 
@@ -268,6 +268,8 @@
     margin-top: 2em;
     margin-left: 2em;
     position: relative;
+
+    transition: all ease 1s;
   }
 
   .logo .main {
@@ -297,7 +299,7 @@
     max-width: 600px;
     width: 100%;
     margin: auto;
-    z-index: 9999;
+    z-index: 7777;
     margin-top: 2em;
   }
 
@@ -325,7 +327,9 @@
     transition: all ease .25s;
     z-index: 5;
     cursor: pointer;
+    
   }
+
 
   nav li:nth-child(1) {
     border-radius: 50px 0px 0px 50px;
@@ -397,7 +401,7 @@
 
   .about {
     text-align: center;
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -412,6 +416,7 @@
     margin: auto;
   }
 
+
   .input-container {
     position: relative;
     margin: 50px auto;
@@ -419,7 +424,7 @@
     max-width: 500px;
   }
 
-  .input-container input[type="text"] {
+  .input-container input {
     font-size: 20px;
     width: 100%;
     border: none;
@@ -439,8 +444,8 @@
     pointer-events: none;
   }
 
-  .input-container input[type="text"]:focus~.label,
-  .input-container input[type="text"]:valid~.label {
+  .input-container input:focus~.label,
+  .input-container input:valid~.label {
     top: -20px;
     font-size: 16px;
     color: var(--titles);
@@ -460,8 +465,8 @@
     transition: all 0.3s ease;
   }
 
-  .input-container input[type="text"]:focus~.underline,
-  .input-container input[type="text"]:valid~.underline {
+  .input-container input:focus~.underline,
+  .input-container input:valid~.underline {
     -webkit-transform: scaleX(1);
     -ms-transform: scaleX(1);
     transform: scaleX(1);
@@ -544,37 +549,85 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-width: 100%;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
+    background-color: var(--hover);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='399' viewBox='0 0 100 199'%3E%3Cg fill='%23003049' fill-opacity='.1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     overflow: hidden;
-    z-index: 100;
     z-index: 9999 !important;
+    transition: all ease 1s;
   }
 
-  .preloader .text-container {
+  .subpreloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 100dvh;
     display: flex;
-    flex-direction: row;
-    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
     overflow: hidden;
-    color: var(--secondary);
-    opacity: 0;
+    z-index: 8888 !important;
+    transition: all ease 1s;
+    transition-delay: .2s;
+  }
 
-
+  .hideloader {
+    height: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
 
-  .preloader .text-container h5 {
-    font-size: clamp(26px, 17.5vw, 46px) !important;
+  .unloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 0dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hover);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='399' viewBox='0 0 100 199'%3E%3Cg fill='%23003049' fill-opacity='.1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 9999 !important;
+    transition: all ease 1s;
+    transition-delay:.2s ;
   }
 
-  h5 {
-    margin: 0;
-    padding: 0;
+  .subunloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 0dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    overflow: hidden;
+    z-index: 8888 !important;
+    transition: all ease 1s;
+    transition-delay: 0s;
+  }
+
+  .showloader {
+    height: 100dvh !important;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
 
@@ -587,15 +640,16 @@
     color: var(--secondary);
     padding: 32px;
     height: 300px;
-    border-radius: 25px;
+    border-radius: 10px;
     position: fixed;
     bottom: 16px;
     right: 16px;
-    z-index: 9999;
+    z-index: 7777;
   }
 
-  .cookies h4 {
+  .cookies * {
     margin: 0px;
+    padding: 0%;
   }
 
   .cookies button {
@@ -606,7 +660,8 @@
     font-weight: 500;
     color: #181818;
     cursor: pointer;
-    border-radius: 8px;
+    transition: all ease 1s;
+    border-radius: 10px;
     -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
   }
@@ -614,6 +669,8 @@
   .cookies button:hover {
     -webkit-animation: wind 2s ease-in-out infinite;
     animation: wind 2s ease-in-out infinite;
+    background: var(--primary);
+    color: var(--secondary);
   }
 
   @-webkit-keyframes wind {
@@ -831,6 +888,7 @@
     width: 100px;
     height: 2em;
     position: relative;
+    font-weight: 600;
     transition: all ease .25s;
 
   }
@@ -901,7 +959,7 @@
     color: var(--secondary);
     width: 100%;
     height: 100%;
-    border-radius: 25px;
+    border-radius: 10px;
   }
 
   .wide {
@@ -920,10 +978,15 @@
     position: relative;
   }
 
+  .text {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
   .box h5 {
     position: absolute;
     top: 24px;
-    left: 24px;
   }
 
   .box h4 {
@@ -974,6 +1037,11 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    transition: background ease .2s;
+  }
+
+  .audio-btn:hover {
+    background: var(--hover);
   }
 
   .audio-btn .audio-btn-icon {
@@ -1047,8 +1115,8 @@
   .rigth-click {
     z-index: 9999;
     position: absolute;
-    padding: 16px;
-    top:50px;
+    padding: 10px;
+    top: 50px;
     left: 50px;
     height: 100%;
     max-height: 300px;
@@ -1059,7 +1127,7 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
+    border-radius: 10px;
     /* transition: all ease .25s; */
     font-family: Arial, Helvetica, sans-serif;
     display: none;
@@ -1079,27 +1147,28 @@
     gap: 5px;
   }
 
-  .rigth-click ul li , .rigth-click ul li a{
+  .rigth-click ul li,
+  .rigth-click ul li a {
     height: calc(100% / 5);
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    gap: 5px;
     align-items: center;
     width: 100%;
     transition: all ease .2s;
     cursor: pointer;
     font-weight: 400;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 14px;
     padding: 0px 10px 0px 10px;
   }
 
-  .rigth-click ul li a{
+  .rigth-click ul li a {
     padding: 0 !important;
   }
 
 
-  .rigth-click ul li:hover svg{
+  .rigth-click ul li:hover svg {
     fill: var(--primary) !important;
     color: var(--primary) !important;
     transition: fill ease .25s;
@@ -1108,11 +1177,11 @@
   .rigth-click ul li:last-child {
     border: 2px solid var(--secondary);
     color: var(--secondary);
-    border-radius: 15px;
+    border-radius: 10px;
 
   }
 
-  .rigth-click ul li:last-child:hover{
+  .rigth-click ul li:last-child:hover {
     background-color: var(--secondary) !important;
     color: var(--primary);
     border-color: var(--secondary);

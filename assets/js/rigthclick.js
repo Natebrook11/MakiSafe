@@ -7,6 +7,6 @@ logo.onauxclick = (event) => {
 };
 document.addEventListener("contextmenu", (e) => { e.preventDefault() });
 
-document.addEventListener('click' , function(){
- rigthClick.style.display = 'none'
+document.addEventListener('click', function () {
+  rigthClick.style.display = 'none'
 })

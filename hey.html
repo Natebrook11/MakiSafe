@@ -74,7 +74,7 @@
   </div>
   <header>
     <div class="logo">
-      <a href="/index.html">
+      <div onclick="unload('index')">
         <h3 class="main"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"
             style="fill: var(--secondary);transform: ;msFilter:;">
             <path
@@ -87,7 +87,7 @@
               d="M18 10H9V7c0-1.654 1.346-3 3-3s3 1.346 3 3h2c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-7.939 5.499A2.002 2.002 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723V20h-2v-2.277a1.992 1.992 0 0 1-.939-2.224z">
             </path>
           </svg></h3>
-      </a>
+        </div>
       <div class="rigth-click">
         <ul>
           <li><a href="/assets/img/lock.svg" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -193,136 +193,9 @@
   </div>
 
   <main>
-
-    <section class="hero" id="home">
-      <h1>MakiSafe</h1>
-      <div class="text-animation-render">
-        <div>
-          <span>The</span>
-          <span>The</span>
-        </div>
-        <div>
-          <span>new</span>
-          <span>new</span>
-        </div>
-        <div>
-          <span>security</span>
-          <span>security</span>
-        </div>
-        <div>
-          <span>revolution</span>
-          <span>revolution</span>
-        </div>
-        <div>
-          <span>!</span>
-          <span>!</span>
-        </div>
-      </div>
-      <button onclick="unload('hey')" class="learn-more">
-          <span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="button-text">Learn More</span>
-      </button>
-    </section>
-    <hr>
-    <section class="about" id="info">
-      <img src="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg" alt="Here goes a image of two security cameras that show the potential of the security system.">
-      <h2>About Us</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minus expedita reprehenderit quae, non
-        veniam beatae aspernatur aliquid iusto voluptatum similique ea in ut suscipit deleniti? Tenetur voluptatibus in
-        eum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita eveniet aliquam ut labore impedit dolore
-        iusto ipsa, reiciendis numquam eius ratione temporibus ducimus eligendi architecto possimus aperiam tempora nisi
-        ullam? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsa quis ab eos laborum
-        fugiat ipsum illo minima labore atque, magni, sit architecto dignissimos maxime odio soluta sunt aliquid
-        nostrum!
-        <br>
-      </p>
-      <h4>
-        Nate brook
-      </h4>
-
-      <div class="row">
-        <div class="bentoflex">
-          <div class="box wide">
-            <div class="text">
-              <h5>Aboout us</h5>
-
-              <h4>Hey there this is a box and this is the title</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, nihil reiciendis</p>
-
-
-            </div>
-            <img src="" alt="">
-
-          </div>
-          <div class="box small">
-            <div class="text">
-              <h5>Aboout us</h5>
-
-              <h4>Hey there this is a box and this is the title</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, nihil reiciendis</p>
-
-
-            </div>
-          </div>
-        </div>
-        <div class="bentoflex">
-          <div class="box small">
-            <div class="text">
-              <h5>Aboout us</h5>
-
-              <h4>Hey there this is a box and this is the title</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, nihil reiciendis</p>
-
-
-            </div>
-          </div>
-          <div class="box wide">
-            <div class="text">
-              <h5>Aboout us</h5>
-
-              <h4>Hey there this is a box and this is the title</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, nihil reiciendis</p>
-
-
-            </div>
-            <img src="" alt="">
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <hr>
-    <section class="contact" id="contactus">
-      <h3>Contact</h3>
-      <form action="" netlify>
-        <div class="input-container">
-          <input type="text" id="input" required="">
-          <label for="input" class="label">Name</label>
-          <div class="underline"></div>
-        </div>
-        <div class="input-container">
-          <input type="email" id="input" required="">
-          <label for="input" class="label">Email</label>
-          <div class="underline"></div>
-        </div>
-        <div class="input-container">
-          <input type="text" id="input" required="">
-          <label for="input" class="label">Label</label>
-          <div class="underline"></div>
-        </div>
-        <button type="submit" class="learn-more">
-          <span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="button-text">Submit It!</span>
-        </button>
-
-      </form>
-    </section>
+    <div class="hero">
+      <h1>pepe</h1>
+    </div>
   </main>
   <footer class="footer">
     <h4>© 2024 MakiSafe. All rights reserved.</h4>
@@ -341,11 +214,11 @@
     setTimeout(function () {
       preloader.classList.toggle('hideloader');
       subpreloader.classList.toggle('hideloader');
-    }, 250)
+    }, 1000)
     setTimeout(function () {
       preloader.remove()
       subpreloader.remove()
-    }, 1500)
+    }, 2500)
   };
 
   const unloader = document.querySelector('.unloader');
